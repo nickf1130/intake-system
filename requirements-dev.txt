@@ -1,0 +1,4 @@
+# Miscellaneous testing tools, not required.
+
+pytest==8.4.2
+ruff==0.15.18

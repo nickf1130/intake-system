@@ -1,0 +1,34 @@
+# Tooling configuration. The bot itself is run with `python main.py` and is
+# not installed as a package, so there is no [build-system] section here.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Show a one-line summary of anything that is not a plain pass.
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes: undefined names, unused imports
+    "I",    # import sorting
+    "UP",   # prefer modern Python syntax
+    "B",    # bugbear: likely bugs and footguns
+    "SIM",  # simplifiable code
+    "RUF",  # ruff's own checks
+]
+
+ignore = [
+    # __all__ in intake/__init__.py is grouped by kind, with the older
+    # back-compat names last under their own comment. Alphabetising it would
+    # scatter those through the list and lose that meaning.
+    "RUF022",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Test files reach into internals on purpose to check them.
+"tests/*" = ["SLF001"]

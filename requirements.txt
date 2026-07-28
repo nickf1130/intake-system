@@ -1,0 +1,5 @@
+py-cord==2.6.1
+gspread==6.1.4
+python-dotenv==1.0.1
+requests==2.32.3
+tzdata==2024.1
