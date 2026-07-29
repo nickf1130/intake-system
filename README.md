@@ -1,6 +1,8 @@
 # RIT Esports Intake Bot
 
 A face-lift of an older project I made for RIT Esports. This bot turns Google Form submissions into private Discord ticket channels, pings the team's managers, and archives the conversation when the ticket is closed. This helps build a bridge between the Administrative board and the rest of the server through tickets, a higher visibility and user friendly experience over simply direct messaging users.
+
+This bot's only use is for the RIT Esports Discord server.
  
 ## Setup
 
